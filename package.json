@@ -1,0 +1,12 @@
+{
+  "name": "nova-moto-gears",
+  "version": "1.0.0",
+  "description": "Nova Moto - Travel Gears & Accessories E-Commerce Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": ["motorcycle", "touring", "gear", "panniers", "nova-moto"],
+  "author": "Nova Moto",
+  "license": "ISC"
+}

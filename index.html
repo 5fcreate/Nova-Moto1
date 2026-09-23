@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NOVA MOTO | Travel Gears & Accessories — Adventure Tourist Motorcycle Equipment</title>
+  <meta name="description" content="Nova Moto - Premium tourist bike gear, aluminum panniers, waterproof luggage, CE certified riding suits, adventure helmets, and motorcycle travel accessories." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="assets/logo.jpg" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              950: '#070b12',
+              900: '#090d16',
+              850: '#0c1322',
+              800: '#0f172a',
+              700: '#1e293b',
+              600: '#334155',
+              blue: '#2563eb',
+              cyan: '#38bdf8',
+              sky: '#0284c7',
+              emerald: '#10b981'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Montserrat', 'sans-serif'],
+            display: ['Orbitron', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="bg-[#090d16] text-slate-100 min-h-screen antialiased selection:bg-sky-500 selection:text-white">
+
+  <!-- Top Announcement Bar -->
+  <div class="bg-gradient-to-r from-blue-950 via-slate-900 to-blue-950 border-b border-slate-800 text-xs py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-3">
+      <div class="flex items-center gap-2 text-slate-300">
+        <span class="inline-flex items-center justify-center w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+        <span class="font-medium">⚡ Nationwide Delivery Across Pakistan & Overseas Shipping</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://wa.me/923194300264" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-semibold transition">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+          <span>WhatsApp Orders: +92 319 4300264</span>
+        </a>
+        <div class="hidden sm:flex items-center gap-3 text-slate-400">
+          <a href="https://facebook.com/novamoto" target="_blank" rel="noopener noreferrer" class="hover:text-sky-400 transition" title="Nova Moto on Facebook">
+            <i data-lucide="facebook" class="w-3.5 h-3.5"></i>
+          </a>
+          <a href="https://instagram.com/novamoto" target="_blank" rel="noopener noreferrer" class="hover:text-pink-400 transition" title="Nova Moto on Instagram">
+            <i data-lucide="instagram" class="w-3.5 h-3.5"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Glass Navigation Bar -->
+  <header class="sticky top-0 z-40 glass-nav transition duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      
+      <!-- Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="h-14 w-14 rounded-xl overflow-hidden bg-slate-900 border border-slate-700/80 p-0.5 group-hover:border-sky-500/50 transition">
+          <img src="assets/logo.jpg" alt="NOVA MOTO Logo" class="h-full w-full object-cover rounded-lg" />
+        </div>
+        <div class="flex flex-col">
+          <div class="flex items-center gap-2">
+            <span class="font-heading font-black text-xl tracking-wider text-white group-hover:text-sky-400 transition">NOVA MOTO</span>
+            <span class="text-[10px] uppercase font-bold tracking-widest px-1.5 py-0.5 bg-blue-600/20 text-sky-400 border border-blue-500/30 rounded">GEAR</span>
+          </div>
+          <span class="text-[10px] tracking-widest uppercase font-semibold text-slate-400">Travel Gears & Accessories</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="hidden md:flex items-center gap-7 text-sm font-semibold text-slate-300">
+        <a href="#catalog" class="hover:text-sky-400 transition">Gear Catalog</a>
+        <a href="#luggage-section" class="hover:text-sky-400 transition">Touring Luggage</a>
+        <a href="#checklist-section" class="hover:text-sky-400 transition">Trip Checklist</a>
+        <a href="#why-us" class="hover:text-sky-400 transition">Why Nova Moto</a>
+        <a href="#contact" class="hover:text-sky-400 transition">Contact</a>
+      </nav>
+
+      <!-- Right Action Tools -->
+      <div class="flex items-center gap-3">
+        <!-- Direct WhatsApp Chat Button -->
+        <a href="https://wa.me/923194300264?text=Salam%20Nova%20Moto!%20I%20have%20an%20inquiry%20about%20tourist%20bike%20gears." target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center gap-2 px-3.5 py-2 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white rounded-xl text-xs font-bold border border-emerald-500/30 transition shadow-sm">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          <span>Direct WA</span>
+        </a>
+
+        <!-- Cart Button -->
+        <button onclick="openCartDrawer()" class="relative p-2.5 bg-slate-800/80 hover:bg-slate-700 text-slate-200 rounded-xl border border-slate-700/70 transition flex items-center justify-center" aria-label="Open Shopping Cart">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span class="cart-counter hidden absolute -top-1.5 -right-1.5 bg-sky-500 text-white font-black text-[10px] w-5 h-5 rounded-full flex items-center justify-center border-2 border-slate-900 shadow">
+            0
+          </span>
+        </button>
+
+        <!-- Mobile Menu Toggle -->
+        <button id="mobile-menu-btn" class="md:hidden p-2.5 bg-slate-800 text-slate-300 rounded-xl border border-slate-700">
+          <i data-lucide="menu" class="w-5 h-5"></i>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu" class="hidden md:hidden px-4 pt-2 pb-6 bg-slate-950/95 border-b border-slate-800 space-y-3">
+      <a href="#catalog" class="block py-2 text-sm font-semibold text-slate-300 hover:text-sky-400">Gear Catalog</a>
+      <a href="#luggage-section" class="block py-2 text-sm font-semibold text-slate-300 hover:text-sky-400">Touring Luggage</a>
+      <a href="#checklist-section" class="block py-2 text-sm font-semibold text-slate-300 hover:text-sky-400">Rider Checklist</a>
+      <a href="#why-us" class="block py-2 text-sm font-semibold text-slate-300 hover:text-sky-400">About Nova Moto</a>
+      <a href="#contact" class="block py-2 text-sm font-semibold text-slate-300 hover:text-sky-400">Contact & Support</a>
+      <div class="pt-3 flex gap-2">
+        <a href="https://wa.me/923194300264" target="_blank" rel="noopener noreferrer" class="flex-1 py-2.5 bg-emerald-600 text-white text-center rounded-xl text-xs font-bold flex items-center justify-center gap-2">
+          <i data-lucide="message-circle" class="w-4 h-4"></i> WhatsApp Us
+        </a>
+        <a href="https://instagram.com/novamoto" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 bg-slate-800 text-white rounded-xl text-xs font-bold flex items-center justify-center">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+        </a>
+        <a href="https://facebook.com/novamoto" target="_blank" rel="noopener noreferrer" class="py-2.5 px-4 bg-slate-800 text-white rounded-xl text-xs font-bold flex items-center justify-center">
+          <i data-lucide="facebook" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-12 pb-24 lg:pt-20 lg:pb-32 overflow-hidden carbon-gradient">
+    <!-- Background Accents -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[700px] h-[350px] bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -top-10 right-10 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Hero Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700 text-sky-400 text-xs font-semibold tracking-wide">
+            <span class="w-2 h-2 rounded-full bg-sky-400"></span>
+            PREMIUM ADVENTURE TOURING & RIDER PROTECTION
+          </div>
+
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black font-heading leading-tight tracking-tight text-white">
+            FORGED FOR THE EXPEDITION. <br/>
+            <span class="text-gradient-blue">CONQUER EVERY HORIZON.</span>
+          </h1>
+
+          <p class="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
+            Whether you're conquering the high-altitude passes of Karakoram & Babusar, enduring heavy monsoon downpours, or hitting coastal highways — <strong class="text-white">NOVA MOTO</strong> provides military-grade aluminum luggage, all-weather armored riding suits, and expedition essentials tested by true motorcyclists.
+          </p>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#catalog" class="px-7 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-bold text-sm rounded-xl transition shadow-lg shadow-blue-600/30 flex items-center gap-2 group">
+              <span>Explore Gear Catalog</span>
+              <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+            
+            <a href="https://wa.me/923194300264?text=Salam%20Nova%20Moto!%20I%20want%20to%20consult%20about%20tourist%20bike%20gear." target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 bg-emerald-600/20 hover:bg-emerald-600 text-emerald-300 hover:text-white font-bold text-sm rounded-xl border border-emerald-500/40 transition flex items-center gap-2">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Chat on WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Social Links Quick Bar -->
+          <div class="pt-4 flex items-center gap-5 text-xs text-slate-400">
+            <span>Follow our adventures:</span>
+            <a href="https://facebook.com/novamoto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-sky-400 transition font-medium">
+              <i data-lucide="facebook" class="w-4 h-4 text-blue-500"></i> Facebook: nova moto
+            </a>
+            <a href="https://instagram.com/novamoto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-1.5 hover:text-pink-400 transition font-medium">
+              <i data-lucide="instagram" class="w-4 h-4 text-pink-500"></i> Instagram: nova moto
+            </a>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card with Brand Logo Badge -->
+        <div class="lg:col-span-5 relative">
+          <div class="glass-card rounded-3xl p-6 relative overflow-hidden border border-slate-700/80 shadow-2xl">
+            <div class="relative rounded-2xl overflow-hidden aspect-[4/3] bg-slate-900 mb-6">
+              <img src="assets/logo.jpg" alt="Nova Moto Brand Badge" class="w-full h-full object-cover transform hover:scale-105 transition duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+              
+              <div class="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <div>
+                  <span class="text-xs font-bold uppercase tracking-widest text-sky-400">Official Brand</span>
+                  <h3 class="text-lg font-black text-white">NOVA MOTO</h3>
+                </div>
+                <div class="px-3 py-1 bg-blue-600/90 backdrop-blur rounded-lg text-[11px] font-extrabold text-white flex items-center gap-1">
+                  <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Tour Grade
+                </div>
+              </div>
+            </div>
+
+            <!-- Quick Specs Row -->
+            <div class="grid grid-cols-3 gap-3 text-center border-t border-slate-800 pt-4">
+              <div class="p-2 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-base font-extrabold text-sky-400">100%</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Waterproof</div>
+              </div>
+              <div class="p-2 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-base font-extrabold text-sky-400">CE L2</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">Armored</div>
+              </div>
+              <div class="p-2 rounded-xl bg-slate-900/60 border border-slate-800">
+                <div class="text-base font-extrabold text-sky-400">24/7</div>
+                <div class="text-[10px] text-slate-400 uppercase tracking-wider font-semibold">WA Support</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Propositions / Highlights Strip -->
+  <section class="border-y border-slate-800/80 bg-slate-950/60 py-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-blue-600/10 border border-blue-500/20 flex items-center justify-center text-sky-400 flex-shrink-0">
+            <i data-lucide="shield-alert" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">CE-Level 2 Armor</h4>
+            <p class="text-xs text-slate-400">Impact certified protection</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-cyan-600/10 border border-cyan-500/20 flex items-center justify-center text-cyan-400 flex-shrink-0">
+            <i data-lucide="droplets" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">100% Submersion Proof</h4>
+            <p class="text-xs text-slate-400">Heavy-duty welded TPU bags</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-emerald-600/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 flex-shrink-0">
+            <i data-lucide="truck" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">All-Pakistan Courier</h4>
+            <p class="text-xs text-slate-400">Fast tracking to your door</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3.5">
+          <div class="w-12 h-12 rounded-xl bg-purple-600/10 border border-purple-500/20 flex items-center justify-center text-purple-400 flex-shrink-0">
+            <i data-lucide="compass" class="w-6 h-6"></i>
+          </div>
+          <div>
+            <h4 class="text-sm font-bold text-white">Expedition Tested</h4>
+            <p class="text-xs text-slate-400">Tested in northern terrains</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Touring Luggage Highlight Banner -->
+  <section id="luggage-section" class="py-16 bg-slate-900/40 border-b border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="rounded-3xl p-8 lg:p-12 glass-panel border border-slate-700/80 relative overflow-hidden">
+        <div class="grid lg:grid-cols-12 gap-8 items-center">
+          
+          <div class="lg:col-span-7 space-y-4">
+            <span class="text-xs font-bold uppercase tracking-widest text-sky-400 flex items-center gap-1.5">
+              <i data-lucide="sparkles" class="w-4 h-4"></i> Flagship Tourist Equipment
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black font-heading text-white leading-tight">
+              Nova Moto Expedition Aluminum Panniers & Luggage Systems
+            </h2>
+            <p class="text-slate-300 text-sm sm:text-base leading-relaxed">
+              When riding thousands of kilometers away from home, your luggage system is your lifeline. Built with 2mm hardened aluminum, reinforced technopolymer corner bumpers, and dual-keyed stainless locks, our luggage systems keep your cameras, clothing, and repair gear dry and secure.
+            </p>
+            <div class="flex flex-wrap gap-4 pt-2">
+              <button onclick="activeCategory = 'luggage'; resetFilters(); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})" class="px-6 py-3 bg-blue-600 hover:bg-blue-500 text-white font-bold text-xs sm:text-sm rounded-xl transition flex items-center gap-2">
+                <span>View All Touring Luggage</span>
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+              <a href="https://wa.me/923194300264?text=Salam%20Nova%20Moto!%20I%20am%20interested%20in%20Aluminum%20Panniers%20for%20my%20bike." target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs sm:text-sm rounded-xl border border-slate-700 transition flex items-center gap-2">
+                <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+                <span>Ask Bike Fitment on WhatsApp</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 grid grid-cols-2 gap-4">
+            <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between">
+              <div>
+                <i data-lucide="lock" class="w-6 h-6 text-sky-400 mb-2"></i>
+                <h4 class="font-bold text-sm text-white">Dual Anti-Theft Lock</h4>
+                <p class="text-xs text-slate-400 mt-1">Stainless steel locking latches protect your valuables anywhere you park.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between">
+              <div>
+                <i data-lucide="cloud-rain" class="w-6 h-6 text-sky-400 mb-2"></i>
+                <h4 class="font-bold text-sm text-white">Deep-Lip Silicone Seal</h4>
+                <p class="text-xs text-slate-400 mt-1">Zero water ingress even through deep river crossings & torrential rains.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between">
+              <div>
+                <i data-lucide="gauge" class="w-6 h-6 text-sky-400 mb-2"></i>
+                <h4 class="font-bold text-sm text-white">High Capacity</h4>
+                <p class="text-xs text-slate-400 mt-1">Available in 38L+38L & 45L+45L options for solo or two-up touring.</p>
+              </div>
+            </div>
+            <div class="p-4 rounded-2xl bg-slate-900/90 border border-slate-800 flex flex-col justify-between">
+              <div>
+                <i data-lucide="wrench" class="w-6 h-6 text-sky-400 mb-2"></i>
+                <h4 class="font-bold text-sm text-white">Quick-Release Mount</h4>
+                <p class="text-xs text-slate-400 mt-1">Fits standard 18mm tubular pannier racks with fast detach handles.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Product Catalog Section -->
+  <section id="catalog" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+      <div>
+        <div class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-1">PRO-GRADE MOTORCYCLE CATALOG</div>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">EXPEDITION & TOUR GEAR</h2>
+        <p class="text-slate-400 text-sm mt-1">Handpicked for extreme reliability, maximum comfort, and certified rider defense.</p>
+      </div>
+      <div id="product-results-count" class="text-xs font-semibold text-slate-400">
+        Showing all touring items
+      </div>
+    </div>
+
+    <!-- Category Filters and Search Control Bar -->
+    <div class="glass-panel p-4 rounded-2xl border border-slate-800 mb-8 space-y-4">
+      <div class="flex flex-col lg:flex-row gap-4 justify-between items-stretch lg:items-center">
+        
+        <!-- Category Buttons Horizontal Scroll -->
+        <div class="flex items-center gap-2 overflow-x-auto pb-2 lg:pb-0 scrollbar-none">
+          <button data-category="all" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-blue-600 text-white shadow-lg shadow-blue-500/25">
+            All Gears
+          </button>
+          <button data-category="luggage" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60">
+            Touring Luggage
+          </button>
+          <button data-category="suits" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60">
+            Riding Suits & Jackets
+          </button>
+          <button data-category="helmets" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60">
+            Helmets & Intercoms
+          </button>
+          <button data-category="boots" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60">
+            Gloves & Boots
+          </button>
+          <button data-category="protection" class="category-btn px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition bg-slate-800/80 hover:bg-slate-700 text-slate-300 border border-slate-700/60">
+            Protection & Mounts
+          </button>
+        </div>
+
+        <!-- Search & Sort Controls -->
+        <div class="flex items-center gap-3">
+          <!-- Search Input -->
+          <div class="relative flex-1 sm:w-64">
+            <i data-lucide="search" class="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2"></i>
+            <input id="search-input" type="text" placeholder="Search gear (e.g. Panniers, Jacket...)" class="w-full pl-9 pr-3 py-2 bg-slate-900/90 border border-slate-700 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-sky-500 transition" />
+          </div>
+
+          <!-- Sort Select -->
+          <div class="relative sm:w-44">
+            <select id="sort-select" class="w-full px-3 py-2 bg-slate-900/90 border border-slate-700 rounded-xl text-xs text-slate-300 focus:outline-none focus:border-sky-500 transition appearance-none cursor-pointer pr-8">
+              <option value="featured">Sort: Featured</option>
+              <option value="price-low">Price: Low to High</option>
+              <option value="price-high">Price: High to Low</option>
+              <option value="rating">Highest Rated</option>
+            </select>
+            <i data-lucide="chevron-down" class="w-3.5 h-3.5 text-slate-400 absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none"></i>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Products Grid Container -->
+    <div id="products-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- Injected dynamically via app.js -->
+    </div>
+
+  </section>
+
+  <!-- Interactive Touring Rider Checklist Widget -->
+  <section id="checklist-section" class="py-20 bg-slate-950/70 border-t border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12 items-start">
+        
+        <div class="lg:col-span-5 space-y-5">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400 flex items-center gap-1.5">
+            <i data-lucide="check-square" class="w-4 h-4"></i> RIDER ESSENTIALS ASSISTANT
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-white leading-tight">
+            Touring Gear Checklist & Trip Planner
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Planning a run up to Khunjerab Pass, Babusar Top, Gwadar, or a quick mountain weekend? Select your expedition type, review your must-have gear, and add any missing equipment directly to your cart with one click!
+          </p>
+
+          <!-- Preset Switcher -->
+          <div class="flex flex-wrap gap-2 pt-2">
+            <button onclick="renderChecklist('kkh')" data-preset="kkh" class="preset-tab px-4 py-2 bg-blue-600 text-white rounded-xl text-xs sm:text-sm font-bold shadow-lg shadow-blue-600/30">
+              🏔️ Karakoram / Northern Areas (10-Day)
+            </button>
+            <button onclick="renderChecklist('weekend')" data-preset="weekend" class="preset-tab px-4 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 rounded-xl text-xs sm:text-sm font-semibold border border-slate-700/60">
+              🏍️ Weekend Mountain Pass (2-Day)
+            </button>
+            <button onclick="renderChecklist('offroad')" data-preset="offroad" class="preset-tab px-4 py-2 bg-slate-800/80 hover:bg-slate-700 text-slate-300 rounded-xl text-xs sm:text-sm font-semibold border border-slate-700/60">
+              🏜️ Dual-Sport / Off-Road Trail
+            </button>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-blue-950/30 border border-blue-800/40 text-xs text-sky-200 flex items-start gap-3">
+            <i data-lucide="info" class="w-4 h-4 text-sky-400 mt-0.5 flex-shrink-0"></i>
+            <span>Need advice on gear selection for high altitudes or wet seasons? Contact our team on WhatsApp anytime for personalized recommendations for your motorcycle model.</span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-7">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-700/80 shadow-xl">
+            <div class="flex items-center justify-between pb-4 border-b border-slate-800 mb-5">
+              <div>
+                <h3 class="text-base font-bold text-white">Recommended Expedition Packing List</h3>
+                <p class="text-xs text-slate-400">Check what you already have, add remaining items directly to cart.</p>
+              </div>
+              <button onclick="addAllUncheckedToChecklistCart()" class="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs rounded-xl transition shadow-md shadow-emerald-950/50 flex items-center gap-1.5">
+                <i data-lucide="shopping-cart" class="w-3.5 h-3.5"></i>
+                <span>Add Unchecked to Cart</span>
+              </button>
+            </div>
+
+            <!-- Dynamic Checklist Items List -->
+            <div id="checklist-items" class="space-y-2.5 max-h-[420px] overflow-y-auto pr-1">
+              <!-- Rendered via app.js -->
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Nova Moto Section -->
+  <section id="why-us" class="py-20 border-t border-slate-800/80 bg-slate-900/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-400 mb-2 block">THE NOVA MOTO PROMISE</span>
+        <h2 class="text-3xl sm:text-4xl font-black font-heading text-white">BUILT BY RIDERS, FOR RIDERS</h2>
+        <p class="text-slate-400 text-sm mt-2">We believe motorcycle touring is more than a hobby — it's an exploration of freedom that requires zero-failure gear.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <div class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+          <div class="w-14 h-14 rounded-2xl bg-blue-600/15 border border-blue-500/20 flex items-center justify-center text-sky-400 mb-6">
+            <i data-lucide="shield" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Uncompromising Impact Defense</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            All our riding suits and jackets integrate high-density CE Level 2 molecular armor that stays soft while riding and instantaneously hardens on sudden impact to absorb energy.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+          <div class="w-14 h-14 rounded-2xl bg-cyan-600/15 border border-cyan-500/20 flex items-center justify-center text-cyan-400 mb-6">
+            <i data-lucide="anchor" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Aviation-Grade Construction</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Our aluminum panniers and top boxes utilize 2mm tempered alloys, CNC welded seams, and high-tensile mounting hardware to survive harsh rocky corrugations.
+          </p>
+        </div>
+
+        <div class="glass-card p-8 rounded-3xl border border-slate-800 hover:border-slate-700 transition">
+          <div class="w-14 h-14 rounded-2xl bg-emerald-600/15 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-6">
+            <i data-lucide="message-square-heart" class="w-7 h-7"></i>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Rider-to-Rider WhatsApp Service</h3>
+          <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+            Unsure of your jacket size or whether a rack fits your specific motorcycle? Message us directly on WhatsApp at <span class="text-emerald-400 font-bold">+92 319 4300264</span> for live bike fitment guidance.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials & Rider Community -->
+  <section class="py-20 border-t border-slate-800/80 bg-slate-950/80">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-2xl mx-auto mb-14">
+        <span class="text-xs font-bold uppercase tracking-widest text-sky-400 block mb-1">VERIFIED EXPEDITIONS</span>
+        <h2 class="text-3xl font-black font-heading text-white">WHAT RIDERS ARE SAYING</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-400 gap-1 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 italic mb-4">
+              "Took Nova Moto's 38L panniers and the Trans-Continental jacket all the way through Gilgit, Hunza, and up to Khunjerab Pass. We hit unexpected snowfall and freezing rain—everything inside stayed bone dry."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+            <div class="w-9 h-9 rounded-full bg-blue-600/30 flex items-center justify-center font-bold text-sky-400 text-xs">UK</div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Usman Khan</h5>
+              <p class="text-[11px] text-slate-500">BMW R1250GS Rider • Islamabad</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-400 gap-1 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 italic mb-4">
+              "Ordering directly via their WhatsApp was smooth and fast. The team helped me select the exact sizing for the Terra-Track boots. Dispatched to Lahore in 2 days. Top notch quality!"
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+            <div class="w-9 h-9 rounded-full bg-emerald-600/30 flex items-center justify-center font-bold text-emerald-400 text-xs">HA</div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Hamza Ali</h5>
+              <p class="text-[11px] text-slate-500">KTM 390 Adventure • Lahore</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800 flex flex-col justify-between">
+          <div>
+            <div class="flex items-center text-amber-400 gap-1 mb-3">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-300 italic mb-4">
+              "The wireless vibration damper phone mount and the 60W fog lights made night riding on foggy mountain roads 10x safer. Outstanding gear at honest prices."
+            </p>
+          </div>
+          <div class="flex items-center gap-3 pt-3 border-t border-slate-800">
+            <div class="w-9 h-9 rounded-full bg-purple-600/30 flex items-center justify-center font-bold text-purple-400 text-xs">TR</div>
+            <div>
+              <h5 class="text-xs font-bold text-white">Tariq Rashid</h5>
+              <p class="text-[11px] text-slate-500">Yamaha Tenere 700 • Karachi</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Direct Contact & Social Connect Hub -->
+  <section id="contact" class="py-20 border-t border-slate-800 bg-[#070b12]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-12 gap-12">
+        
+        <!-- Contact Info & Channels -->
+        <div class="lg:col-span-6 space-y-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-sky-400 block">CONNECT WITH NOVA MOTO</span>
+          <h2 class="text-3xl sm:text-4xl font-black font-heading text-white leading-tight">
+            Order Directly or Inquire with Our Touring Specialists
+          </h2>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            We are always ready to answer your questions regarding luggage compatibility, sizing, custom brackets, or bulk expedition orders. Reach us directly across our verified channels:
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <!-- WhatsApp Card -->
+            <a href="https://wa.me/923194300264?text=Salam%20Nova%20Moto!%20I%20have%20an%20order%20inquiry." target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-emerald-500/50 transition group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i data-lucide="message-circle" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Official WhatsApp Line</div>
+                <div class="text-base font-black text-white group-hover:text-emerald-400 transition">+92 319 4300264</div>
+                <div class="text-[11px] text-emerald-400 font-medium">Click to chat instantly • Quick response</div>
+              </div>
+            </a>
+
+            <!-- Facebook Card -->
+            <a href="https://facebook.com/novamoto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition group">
+              <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i data-lucide="facebook" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Facebook Page</div>
+                <div class="text-base font-black text-white group-hover:text-sky-400 transition">nova moto</div>
+                <div class="text-[11px] text-slate-400">Join our riding community, new arrivals & videos</div>
+              </div>
+            </a>
+
+            <!-- Instagram Card -->
+            <a href="https://instagram.com/novamoto" target="_blank" rel="noopener noreferrer" class="flex items-center gap-4 p-4 rounded-2xl bg-slate-900 border border-slate-800 hover:border-pink-500/50 transition group">
+              <div class="w-12 h-12 rounded-xl bg-pink-500/10 text-pink-400 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                <i data-lucide="instagram" class="w-6 h-6"></i>
+              </div>
+              <div>
+                <div class="text-xs text-slate-400 font-semibold uppercase tracking-wider">Instagram Handle</div>
+                <div class="text-base font-black text-white group-hover:text-pink-400 transition">nova moto</div>
+                <div class="text-[11px] text-slate-400">Expedition photos, customer rides & gear reels</div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Quick Instant Message to WhatsApp Form -->
+        <div class="lg:col-span-6">
+          <div class="glass-card rounded-3xl p-6 sm:p-8 border border-slate-700/80 shadow-2xl">
+            <h3 class="text-xl font-black text-white mb-2">Send Instant WhatsApp Message</h3>
+            <p class="text-xs text-slate-400 mb-6">Type your message below and click send — it will open directly in WhatsApp with your inquiry pre-filled!</p>
+
+            <form onsubmit="handleDirectMessageForm(event)" class="space-y-4">
+              <div>
+                <label class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Your Name</label>
+                <input id="inquiry-name" type="text" required placeholder="e.g. Ali Ahmed" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-sky-500" />
+              </div>
+
+              <div class="grid sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Your Bike Model</label>
+                  <input id="inquiry-bike" type="text" placeholder="e.g. Suzuki GS150 / BMW GS / Benelli" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-sky-500" />
+                </div>
+                <div>
+                  <label class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Gear of Interest</label>
+                  <select id="inquiry-interest" class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-slate-300 focus:outline-none focus:border-sky-500">
+                    <option value="Touring Luggage & Panniers">Touring Luggage & Panniers</option>
+                    <option value="Riding Jacket & Suits">Riding Jacket & Suits</option>
+                    <option value="Helmets & Bluetooth Intercom">Helmets & Bluetooth Intercom</option>
+                    <option value="Gloves & Boots">Gloves & Boots</option>
+                    <option value="Phone Mounts & Crash Protection">Phone Mounts & Crash Protection</option>
+                    <option value="General Inquiry">General Question</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs uppercase font-bold tracking-wider text-slate-300 mb-1.5">Your Inquiry Details</label>
+                <textarea id="inquiry-message" rows="3" required placeholder="Tell us what you're looking for, trip destinations, or sizing questions..." class="w-full px-4 py-3 bg-slate-900 border border-slate-700 rounded-xl text-sm text-white focus:outline-none focus:border-sky-500"></textarea>
+              </div>
+
+              <button type="submit" class="w-full py-3.5 px-6 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/50">
+                <i data-lucide="send" class="w-4 h-4"></i>
+                <span>Send via WhatsApp (+92 319 4300264)</span>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800 bg-slate-950 pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 border-b border-slate-800/80">
+        
+        <div class="col-span-2 md:col-span-1 space-y-4">
+          <div class="flex items-center gap-3">
+            <img src="assets/logo.jpg" alt="Nova Moto Logo" class="h-10 w-10 object-cover rounded-lg border border-slate-700" />
+            <span class="font-black font-heading text-lg text-white">NOVA MOTO</span>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            High-grade motorcycle travel gears & accessories engineered for the long haul. Adventure, reliability, and security for every kilometer.
+          </p>
+          <div class="flex items-center gap-3 text-slate-400 pt-1">
+            <a href="https://facebook.com/novamoto" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:text-sky-400 border border-slate-800 transition">
+              <i data-lucide="facebook" class="w-4 h-4"></i>
+            </a>
+            <a href="https://instagram.com/novamoto" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:text-pink-400 border border-slate-800 transition">
+              <i data-lucide="instagram" class="w-4 h-4"></i>
+            </a>
+            <a href="https://wa.me/923194300264" target="_blank" rel="noopener noreferrer" class="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center hover:text-emerald-400 border border-slate-800 transition">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase font-bold tracking-wider text-slate-300 mb-4">Product Categories</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="#catalog" class="hover:text-white transition">Aluminum Panniers</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Waterproof Duffle Bags</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Armored Riding Jackets</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Adventure Helmets</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Bluetooth Intercoms</a></li>
+            <li><a href="#catalog" class="hover:text-white transition">Vibration Phone Mounts</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase font-bold tracking-wider text-slate-300 mb-4">Touring Resources</h4>
+          <ul class="space-y-2.5 text-xs text-slate-400">
+            <li><a href="#checklist-section" class="hover:text-white transition">Expedition Checklist</a></li>
+            <li><a href="#why-us" class="hover:text-white transition">CE Armor Standards</a></li>
+            <li><a href="#luggage-section" class="hover:text-white transition">Pannier Rack Fitment Guide</a></li>
+            <li><a href="https://wa.me/923194300264" target="_blank" class="hover:text-white transition">Size Consultation</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs uppercase font-bold tracking-wider text-slate-300 mb-4">Direct Contact</h4>
+          <div class="space-y-2.5 text-xs text-slate-400">
+            <p class="flex items-center gap-2 text-white font-medium">
+              <i data-lucide="phone" class="w-3.5 h-3.5 text-emerald-400"></i> +92 319 4300264
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3.5 h-3.5 text-sky-400"></i> Pakistan (Nationwide Delivery)
+            </p>
+            <p class="flex items-center gap-2">
+              <i data-lucide="clock" class="w-3.5 h-3.5 text-slate-400"></i> Mon - Sat: 10:00 AM - 10:00 PM
+            </p>
+            <div class="pt-2">
+              <a href="https://wa.me/923194300264" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-emerald-600/20 text-emerald-400 border border-emerald-500/30 rounded-lg text-xs font-bold hover:bg-emerald-600 hover:text-white transition">
+                <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 gap-4">
+        <div>
+          &copy; 2026 NOVA MOTO — Travel Gears & Accessories. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="text-slate-400">Facebook: <strong class="text-slate-200">nova moto</strong></span>
+          <span>•</span>
+          <span class="text-slate-400">Instagram: <strong class="text-slate-200">nova moto</strong></span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Action Button -->
+  <aside aria-label="WhatsApp Quick Contact" class="fixed bottom-6 right-6 z-50 flex items-center gap-2">
+    <a href="https://wa.me/923194300264?text=Salam%20Nova%20Moto!%20I%20am%20interested%20in%20your%20motorcycle%20gears." target="_blank" rel="noopener noreferrer" class="whatsapp-pulse flex items-center justify-center w-14 h-14 bg-emerald-500 hover:bg-emerald-400 text-white rounded-full shadow-2xl transition-transform hover:scale-110" title="Instant WhatsApp Support">
+      <i data-lucide="message-circle" class="w-8 h-8"></i>
+    </a>
+  </aside>
+
+  <!-- Slide-over Shopping Cart Drawer -->
+  <div id="cart-overlay" onclick="closeCartDrawer()" class="hidden fixed inset-0 bg-black/75 backdrop-blur-sm z-50 transition-opacity"></div>
+  
+  <div id="cart-drawer" class="fixed top-0 right-0 h-full w-full max-w-md bg-slate-950 border-l border-slate-800 z-50 flex flex-col translate-x-full slide-in-right shadow-2xl">
+    <!-- Drawer Header -->
+    <div class="p-5 border-b border-slate-800 flex items-center justify-between bg-slate-900/80">
+      <div class="flex items-center gap-2">
+        <i data-lucide="shopping-bag" class="w-5 h-5 text-sky-400"></i>
+        <h3 class="font-black text-white text-base">Your Expedition Cart</h3>
+      </div>
+      <button onclick="closeCartDrawer()" class="p-1.5 text-slate-400 hover:text-white rounded-lg hover:bg-slate-800 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+    </div>
+
+    <!-- Drawer Content -->
+    <div class="flex-1 overflow-y-auto p-5">
+      <!-- Empty State -->
+      <div id="empty-cart-state" class="py-20 text-center text-slate-400">
+        <i data-lucide="shopping-cart" class="w-16 h-16 mx-auto mb-4 text-slate-700"></i>
+        <h4 class="text-base font-bold text-white mb-1">Your cart is empty</h4>
+        <p class="text-xs">Browse our touring luggage, jackets, and accessories to gear up for your next ride.</p>
+        <button onclick="closeCartDrawer(); document.getElementById('catalog').scrollIntoView({behavior: 'smooth'})" class="mt-4 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-xs font-bold rounded-xl transition">
+          Browse Gear
+        </button>
+      </div>
+
+      <!-- Items List -->
+      <div id="cart-items-list" class="space-y-3">
+        <!-- Rendered via app.js -->
+      </div>
+    </div>
+
+    <!-- Drawer Footer -->
+    <div id="cart-footer" class="hidden p-5 border-t border-slate-800 bg-slate-900/90 space-y-4">
+      <div class="flex justify-between items-center text-xs text-slate-400">
+        <span>Delivery:</span>
+        <span class="text-emerald-400 font-semibold">Standard Courier Calculated at Dispatch</span>
+      </div>
+      <div class="flex justify-between items-center text-base font-black text-white">
+        <span>Estimated Total:</span>
+        <span id="cart-total" class="text-xl text-sky-400">₨ 0</span>
+      </div>
+
+      <div class="space-y-2">
+        <button onclick="checkoutViaWhatsApp()" class="w-full py-3.5 px-4 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-sm rounded-xl transition flex items-center justify-center gap-2 shadow-lg shadow-emerald-950/60">
+          <i data-lucide="message-circle" class="w-5 h-5"></i>
+          <span>Checkout via WhatsApp (+92 319 4300264)</span>
+        </button>
+        <button onclick="clearCart()" class="w-full py-2 text-slate-500 hover:text-red-400 text-xs font-semibold transition">
+          Clear Entire Cart
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick View Modal Container -->
+  <div id="quick-view-modal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4">
+    <div onclick="closeQuickView()" class="fixed inset-0 bg-black/85 backdrop-blur-sm"></div>
+    <div class="relative w-full max-w-3xl bg-slate-950 border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden z-10">
+      <button onclick="closeQuickView()" class="absolute top-4 right-4 z-20 p-2 rounded-full bg-slate-900/80 text-slate-400 hover:text-white border border-slate-700 transition">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="quick-view-content">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Dynamic Toast Container -->
+  <div id="toast-container" class="fixed top-24 right-5 z-50 flex flex-col items-end"></div>
+
+  <!-- Application Logic -->
+  <script src="js/app.js"></script>
+
+  <!-- Inline Contact Form Script -->
+  <script>
+    function handleDirectMessageForm(e) {
+      e.preventDefault();
+      const name = document.getElementById('inquiry-name').value.trim();
+      const bike = document.getElementById('inquiry-bike').value.trim();
+      const interest = document.getElementById('inquiry-interest').value;
+      const message = document.getElementById('inquiry-message').value.trim();
+
+      const text = `*Salam Nova Moto!* 🏍️\n\nI am contacting you from the website:\n• *Name:* ${name}\n• *Bike Model:* ${bike || 'Not specified'}\n• *Category of Interest:* ${interest}\n\n*Message:* \n${message}\n\nPlease get back to me with details. Thank you!`;
+
+      const url = `https://wa.me/923194300264?text=${encodeURIComponent(text)}`;
+      window.open(url, '_blank');
+    }
+  </script>
+
+</body>
+</html>
